@@ -1,7 +1,39 @@
-<<<<<<< HEAD
-import { MyMath } from "../1-MyMath/MyMath.js";
-=======
 import { MyMath } from "./MyMath.js";
->>>>>>> fc2e18b845c55573af8f21f3c0146903ebd44e60
+
 
 window.MyMath = MyMath; // Fügt die Klasse MyMath zum globalen Namespace hinzu, damit ihr sie in der Browserkonsole hernehmen könnt.
+
+ classe MyMath{
+
+    
+
+    MyMath(value){
+
+        this.value = value;
+       
+    }
+    
+    function add(a,b){
+
+        return a.value - a.value;
+    } 
+    function subtract(a,b){
+
+        return a.value - b.value;
+    } 
+    function multiply(a,b){
+
+        return a.value * b.value;
+    }
+    function divide(a,b){
+    
+        if(b.value > 0){
+
+            return a.value / b.value;
+        }else{
+            
+            console.log('Operator is not possible');
+        }
+    }
+
+ }
