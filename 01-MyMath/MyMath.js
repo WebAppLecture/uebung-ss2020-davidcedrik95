@@ -18,27 +18,54 @@ export class MyMath {
         this.value = value * 1; 
     }
 
+  
     add(value) {
 
+        this.value += value;
+        return this;
+        
     }
 
     subtract(value) {
 
+        this.value -= value;
+        return this;
     }
 
     multiply(value) {
-
+        
+        this.value *= value;
+        return this;
     }
 
     divide(value) {
 
+        this.value /= value;
+        if(this.value == 0){
+            console.log('Operator is not possible');
+        }
+        return this;
     }
 
-    pow(value) {
+    pow(value,exponent) {
 
+        this.value = value;
+        let result = 1;
+
+        for(let i = 1; i <= exponent; i++) {
+                result  *= this.value;
+        }
+            
+        return this;
+        
     }
 
-    faculty() {
-
+    faculty(){
+        
+        for(let i = this.value -1; i>1; i--){
+            
+            this.value *= i;
+        }
+        return this;
     }
 }
