@@ -52,22 +52,10 @@ export class MyMath {
         this.value = value;
         let result = 1;
 
-        if(this.value >= 0 ) /*  Überprüfe, ob die übergebene Potenz positiv ist. */
-        {
-            if(this.value == 0){
-
-                return this;  /* schickt 1 zuruck, wenn der nutzer die 0 gibt a.expo(0) = 1*/
-            }
-
-            for(let i = 1; i <= exponent; i++) {
+        for(let i = 1; i <= exponent; i++) {
                 result  *= this.value;
-            }
-            
-            
-        }else{
-            console.log('Bitte geben sie eine positive Zahl ein');
         }
-
+            
         return this;
         
     }
