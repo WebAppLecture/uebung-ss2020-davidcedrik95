@@ -18,27 +18,66 @@ export class MyMath {
         this.value = value * 1; 
     }
 
+  
     add(value) {
 
+        this.value += value;
+        return this;
+        
     }
 
     subtract(value) {
 
+        this.value -= value;
+        return this;
     }
 
     multiply(value) {
-
+        
+        this.value *= value;
+        return this;
     }
 
     divide(value) {
 
+        this.value /= value;
+        if(this.value == 0){
+            console.log('Operator is not possible');
+        }
+        return this;
     }
 
-    pow(value) {
+    pow(value,exponent) {
 
+        this.value = value;
+        let result = 1;
+
+        if(this.value >= 0 ) /*  Überprüfe, ob die übergebene Potenz positiv ist. */
+        {
+            if(this.value == 0){
+
+                return this;  /* schickt 1 zuruck, wenn der nutzer die 0 gibt a.expo(0) = 1*/
+            }
+
+            for(let i = 1; i <= exponent; i++) {
+                result  *= this.value;
+            }
+            
+            
+        }else{
+            console.log('Bitte geben sie eine positive Zahl ein');
+        }
+
+        return this;
+        
     }
 
-    faculty() {
-
+    faculty(){
+        
+        for(let i = this.value -1; i>1; i--){
+            
+            this.value *= i;
+        }
+        return this;
     }
 }
