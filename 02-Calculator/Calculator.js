@@ -7,6 +7,7 @@ export class Calculator {
 
     setupNumPad() { 
 
+        console.log('Numpad');
     }
 
     onButtonClick(symbol) {
